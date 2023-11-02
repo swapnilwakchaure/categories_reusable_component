@@ -8,7 +8,7 @@ const PlaceCard = () => {
 
   const getData = () => {
     axios
-      .get("http://localhost:8080/cities")
+      .get("http://192.168.29.181:8080/cities")
       .then((res) => {
         setData(res.data);
         // console.log("res: ", res.data);
@@ -37,7 +37,6 @@ export default PlaceCard;
 
 
 const Header = styled.h1`
-  border: 1px solid red;
   width: 100%;
   margin: auto auto 50px auto;
   padding: 30px 0px;

@@ -1,10 +1,13 @@
 import { useState } from "react";
 import styled from "styled-components";
 import ImageSlider from "./ImageSlider";
+import { useNavigate } from "react-router-dom";
 
 const SingleCard = ({ data }) => {
+  const navigate = useNavigate();
   const [moreDetails, setMoreDetails] = useState(false);
   const {
+    id,
     name,
     location,
     contact,
@@ -28,7 +31,7 @@ const SingleCard = ({ data }) => {
           <ImageSlider imgArr={images} />
         </ImageContainer>
         <InfoContainer>
-          <Name>{name}</Name>
+          <Name onClick={() => navigate(`/${id}`)}>{name}</Name>
           <p>
             <Headings>Nearest City:</Headings> {location}
           </p>
@@ -129,6 +132,7 @@ const Name = styled.p`
   border-radius: 5px;
   background: #ffe0b2;
   color: #e65100;
+  cursor: pointer;
 `;
 
 const Headings = styled.span`

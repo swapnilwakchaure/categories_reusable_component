@@ -13,6 +13,7 @@
     "react-dom": "^18.2.0",
     "react-google-maps": "^9.4.5",
     "react-hook-form": "^7.47.0",
+    "react-icons": "^4.11.0",
     "react-router-dom": "^6.18.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
@@ -20,7 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "server": "json-server --watch db.json --port 8080",
+    "server": "json-server --watch db.json --port 8080 --host 192.168.29.181",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

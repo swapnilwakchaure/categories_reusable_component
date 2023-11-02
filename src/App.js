@@ -1,11 +1,11 @@
 import './App.css';
-import PlaceCard from './Pages/PlaceCard';
+import AllRoutes from './Pages/AllRoutes';
 
 function App() {
 
   return (
     <div className="App">
-      <PlaceCard />
+      <AllRoutes />
     </div>
   );
 }
