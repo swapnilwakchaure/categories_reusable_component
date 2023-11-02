@@ -38,10 +38,9 @@ export default PlaceCard;
 
 const Header = styled.h1`
   border: 1px solid red;
-  width: 90%;
-  max-width: 1040px;
-  margin: auto auto 20px auto;
-  padding: 50px 0px;
+  width: 100%;
+  margin: auto auto 50px auto;
+  padding: 30px 0px;
   background: #E65100;
   color: white;
 `

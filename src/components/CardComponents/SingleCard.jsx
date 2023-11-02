@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import ImageSlider from "./ImageSlider";
 
 const SingleCard = ({ data }) => {
   const [moreDetails, setMoreDetails] = useState(false);
@@ -25,7 +25,7 @@ const SingleCard = ({ data }) => {
     <Main>
       <ProductContainer>
         <ImageContainer>
-          <Image src={images[0]} alt="products" />
+          <ImageSlider imgArr={images} />
         </ImageContainer>
         <InfoContainer>
           <Name>{name}</Name>
@@ -58,16 +58,17 @@ const SingleCard = ({ data }) => {
         </InfoContainer>
       </ProductContainer>
       {moreDetails && (
-        <div>
+        <MoreDetails>
           <p>
-            Distance from metro cities: Mumbai-{distance[0]}km, Pune-
+            <Headings>Distance from metro cities</Headings>: Mumbai-{distance[0]}km, Pune-
             {distance[1]}km
           </p>
-          <p>Routes by Highway: {by_road}</p>
-          <p>Routes by Train: {by_train}</p>
-          <p>Routes by Plane: {by_plane}</p>
-          <p>Description: {description}</p>
-        </div>
+          <p><Headings>Routes by Highway</Headings>: {by_road}
+          </p>
+          <p><Headings>Routes by Train</Headings>: {by_train}</p>
+          <p><Headings>Routes by Plane</Headings>: {by_plane}</p>
+          <p><Headings>Description</Headings>: {description}</p>
+        </MoreDetails>
       )}
     </Main>
   );
@@ -77,30 +78,38 @@ export default SingleCard;
 
 const Main = styled.div`
   width: 90%;
-  max-width: 1040px;
   margin: auto auto 30px auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
   background: #FFF3E0;
+  padding: 0px 20px;
 `;
 
 const ProductContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
   gap: 10px;
+
+  @media (max-width: 1025px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const ImageContainer = styled.div`
-  width: 500px;
+  width: 100%;
 
-  
+  @media (max-width: 1025px)
+
+  @media (max-width: 450px) {
+    width: 420px;
+  }
+
+  @media (max-width: 321px) {
+    width: 300px;
+  }
 `;
 
-const Image = styled.img`
-  width: 90%;
-  height: 90%;
-  padding: 20px 0px;
-`;
 
 const InfoContainer = styled.div`
   width: 90%;
@@ -155,3 +164,7 @@ const Details = styled.p`
   }
 `
 
+const MoreDetails = styled.div`
+  text-align: start;
+  padding: 20px;
+`
