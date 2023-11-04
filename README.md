@@ -9,6 +9,7 @@
 <!-- ### `npm start` -->
 
 <img src="./images/all_information.png" />
+<img src="https://github.com/swapnilwakchaure/categories_reusable_component/assets/55839053/f7475848-f2d7-46e9-a215-d2b1371db46e" />
 
 To see the live of the 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
