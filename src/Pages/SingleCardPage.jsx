@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import axios from "axios";
-import { AiFillCar } from "react-icons/ai";
+// import axios from "axios";
+import { AiFillCar, AiTwotoneStar } from "react-icons/ai";
 import { BiSolidPlane, BiTimeFive } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { PiTrainFill } from "react-icons/pi";
@@ -10,11 +10,19 @@ import { FaCity, FaRegAddressCard, FaLocationArrow } from "react-icons/fa";
 import { FcRating } from "react-icons/fc";
 import { TiContacts } from "react-icons/ti";
 import { MdDescription } from "react-icons/md";
+import { db } from "../database/db";
 
 const SingleCardPage = () => {
   const { id } = useParams();
 
   const [data, setData] = useState({});
+
+  let database = db.find((el) => el.id === Number(id));
+
+  let ratingArr = Array.from(
+    { length: Math.floor(Number(database.rating)) },
+    (_, index) => index
+  );
 
   const {
     name,
@@ -33,20 +41,20 @@ const SingleCardPage = () => {
     description,
   } = data;
 
-  const getData = () => {
-    axios
-      .get(`http://192.168.29.181:8080/cities/${id}`)
-      .then((res) => {
-        setData(res.data);
-        // console.log("res: ", res.data);
-      })
-      .catch((error) => {
-        console.log("error: ", error);
-      });
-  };
+  // const getData = () => {
+  //   axios
+  //     .get(`http://192.168.29.181:8080/cities/${id}`)
+  //     .then((res) => {
+  //       setData(res.data);
+  //       // console.log("res: ", res.data);
+  //     })
+  //     .catch((error) => {
+  //       console.log("error: ", error);
+  //     });
+  // };
 
   useEffect(() => {
-    getData();
+    setData(database);
   }, []);
 
   return (
@@ -70,9 +78,13 @@ const SingleCardPage = () => {
             <p>
               <BiTimeFive /> <Headings>Daily Hours:</Headings> {timing}
             </p>
-            <p>
+            <Rating>
               <FcRating /> <Headings>Rating:</Headings> {rating}
-            </p>
+              {ratingArr.length > 0 &&
+                ratingArr.map((el, index) => (
+                  <AiTwotoneStar color="tomato" key={index} />
+                ))}
+            </Rating>
             <p>
               <BsFillPersonFill /> <Headings>Age Limit:</Headings> {age}
             </p>
@@ -122,10 +134,9 @@ const SingleCardPage = () => {
 
 export default SingleCardPage;
 
-
 const Title = styled.h1`
   padding: 30px 0px;
-  background: #1A237E;
+  background: #1a237e;
   color: white;
   margin: 0px 0px 20px 0px;
 
@@ -153,7 +164,13 @@ const InfoContainer = styled.div`
 
 const Headings = styled.span`
   font-weight: 600;
-  color: #C62828;
+  color: #c62828;
+`;
+
+const Rating = styled.p`
+  display: flex;
+  align-items: center;
+  gap: 3px;
 `;
 
 const Direction = styled.a`
@@ -202,4 +219,3 @@ const Images = styled.img`
     transition: 0.5s ease-in-out;
   }
 `;
-

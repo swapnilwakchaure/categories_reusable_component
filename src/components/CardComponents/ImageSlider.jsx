@@ -32,10 +32,10 @@ const ImageSlider = ({ imgArr }) => {
     <SliderContainer>
       <Image src={imgArr[counter]} alt="nykaa-product" />
 
-      <Button left="0" onClick={handleDec}>
+      <Button lft="0" onClick={handleDec}>
         &lt;
       </Button>
-      <Button right="0" onClick={handleInc}>
+      <Button rft="0" onClick={handleInc}>
         &gt;
       </Button>
     </SliderContainer>
@@ -63,8 +63,8 @@ const Button = styled.button`
   background: rgba(77,77,77,0.3);
   color: white;
   position: absolute;
-  left: ${(props) => props.left};
-  right: ${(props) => props.right};
+  left: ${(props) => props.lft};
+  right: ${(props) => props.rft};
   width: 30px;
   height: 100%;
 

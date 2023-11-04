@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import ImageSlider from "./ImageSlider";
 import { useNavigate } from "react-router-dom";
+import { AiTwotoneStar } from "react-icons/ai";
 
 const SingleCard = ({ data }) => {
   const navigate = useNavigate();
@@ -24,6 +25,11 @@ const SingleCard = ({ data }) => {
     description,
   } = data;
 
+  const ratingArr = Array.from(
+    { length: Math.floor(Number(rating)) },
+    (_, index) => index
+  );
+
   return (
     <Main>
       <ProductContainer>
@@ -44,9 +50,13 @@ const SingleCard = ({ data }) => {
           <p>
             <Headings>Daily Hours:</Headings> {timing}
           </p>
-          <p>
+          <Rating>
             <Headings>Rating:</Headings> {rating}
-          </p>
+            {ratingArr.length > 0 &&
+              ratingArr.map((el, index) => (
+                <AiTwotoneStar color="tomato" key={index} />
+              ))}
+          </Rating>
           <p>
             <Headings>Age Limit:</Headings> {age}
           </p>
@@ -63,14 +73,22 @@ const SingleCard = ({ data }) => {
       {moreDetails && (
         <MoreDetails>
           <p>
-            <Headings>Distance from metro cities</Headings>: Mumbai-{distance[0]}km, Pune-
+            <Headings>Distance from metro cities</Headings>: Mumbai-
+            {distance[0]}km, Pune-
             {distance[1]}km
           </p>
-          <p><Headings>Routes by Highway</Headings>: {by_road}
+          <p>
+            <Headings>Routes by Highway</Headings>: {by_road}
           </p>
-          <p><Headings>Routes by Train</Headings>: {by_train}</p>
-          <p><Headings>Routes by Plane</Headings>: {by_plane}</p>
-          <p><Headings>Description</Headings>: {description}</p>
+          <p>
+            <Headings>Routes by Train</Headings>: {by_train}
+          </p>
+          <p>
+            <Headings>Routes by Plane</Headings>: {by_plane}
+          </p>
+          <p>
+            <Headings>Description</Headings>: {description}
+          </p>
         </MoreDetails>
       )}
     </Main>
@@ -79,7 +97,6 @@ const SingleCard = ({ data }) => {
 
 export default SingleCard;
 
-
 // grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
 
 const Main = styled.div`
@@ -87,7 +104,7 @@ const Main = styled.div`
   margin: auto auto 30px auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
-  background: #E8EAF6;
+  background: #e8eaf6;
   padding: 0px 20px;
 `;
 
@@ -119,7 +136,6 @@ const ImageContainer = styled.div`
   }
 `;
 
-
 const InfoContainer = styled.div`
   width: 90%;
   max-width: 600px;
@@ -129,7 +145,6 @@ const InfoContainer = styled.div`
   padding: 0px 20px;
 `;
 
-
 const Name = styled.p`
   text-align: center;
   padding: 10px 0px;
@@ -137,20 +152,25 @@ const Name = styled.p`
   font-weight: 700;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
-  background: #D50000;
+  background: #d50000;
   color: white;
   cursor: pointer;
 
   &: hover {
-  background: #F44336;
-  transition: 0.3s;
+    background: #f44336;
+    transition: 0.3s;
   }
 `;
 
+const Rating = styled.p`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`;
 
 const Headings = styled.span`
   font-weight: 600;
-  color: #D50000;
+  color: #d50000;
 `;
 
 const Direction = styled.a`
@@ -158,7 +178,7 @@ const Direction = styled.a`
   border: 1px solid;
   border-radius: 4px;
   padding: 5px;
-  background: #1565C0;
+  background: #1565c0;
   color: white;
 
   &: hover {
@@ -177,11 +197,11 @@ const Details = styled.p`
 
   &: hover {
     text-decoration: underline;
-    color: #1565C0;
+    color: #1565c0;
   }
-`
+`;
 
 const MoreDetails = styled.div`
   text-align: start;
   padding: 20px;
-`
+`;

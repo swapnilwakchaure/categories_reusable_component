@@ -36,7 +36,7 @@ const db = [
     google_map:
       "https://www.google.com/maps/dir//lonavala+imagica/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3be8014f6ac9b871:0x578013a6e753cdd2?sa=X&ved=2ahUKEwiJpoeX2qKCAxWUcGwGHQ_0BZEQ9Rd6BAhREAA&sqi=2",
     timing: "10:30am - 7:30pm",
-    rating: "4.3",
+    rating: "3.8",
     age: "No Age Limit",
     by_road:
       "via Bengaluru - Mumbai Hwy/Mumbai Hwy/Mumbai - Pandharpur Rd/Mumbai - Pune Hwy/Mumbai - Satara Hwy. Fastest route now, avoids road closure on Eastern Express Hwy",
@@ -46,7 +46,7 @@ const db = [
       "The nearest airports are Chhatrapati Shivaji Airport in Mumbai, and Airport in Pune.",
     distance: [84, 68],
     images: [
-      "https://hblimg.mmtcdn.com/content/hubble/img/lonavala/mmt/activities/m_imagica_lonavala_l_358_477.jpg",
+      "https://www.imagicaaworld.com/wp-content/uploads/passport-card.jpg?1699083581",
       "https://hblimg.mmtcdn.com/content/hubble/img/lonavala/mmt/activities/m_imagica_lonavala_l_358_477.jpg",
       "https://static.wixstatic.com/media/825e3d_15d7320512624c87904125560ebe8dff~mv2.jpg/v1/fill/w_560,h_322,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Imagica.jpg",
       "https://imgmedia.lbb.in/media/2020/03/5e67d2e7101f7001397bb872_1583862503222.jpg",
@@ -92,7 +92,7 @@ const db = [
     google_map:
       "https://www.google.com/maps/dir//lonavala+imagica/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3be8014f6ac9b871:0x578013a6e753cdd2?sa=X&ved=2ahUKEwiJpoeX2qKCAxWUcGwGHQ_0BZEQ9Rd6BAhREAA&sqi=2",
     timing: "10:30am - 7:30pm",
-    rating: "4.3",
+    rating: "5.0",
     age: "No Age Limit",
     by_road:
       "via Bengaluru - Mumbai Hwy/Mumbai Hwy/Mumbai - Pandharpur Rd/Mumbai - Pune Hwy/Mumbai - Satara Hwy. Fastest route now, avoids road closure on Eastern Express Hwy",
@@ -102,7 +102,7 @@ const db = [
       "The nearest airports are Chhatrapati Shivaji Airport in Mumbai, and Airport in Pune.",
     distance: [84, 68],
     images: [
-      "https://hblimg.mmtcdn.com/content/hubble/img/lonavala/mmt/activities/m_imagica_lonavala_l_358_477.jpg",
+      "https://www.imagicaaworld.com/wp-content/uploads/passport-card.jpg?1699083581",
       "https://hblimg.mmtcdn.com/content/hubble/img/lonavala/mmt/activities/m_imagica_lonavala_l_358_477.jpg",
       "https://static.wixstatic.com/media/825e3d_15d7320512624c87904125560ebe8dff~mv2.jpg/v1/fill/w_560,h_322,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Imagica.jpg",
       "https://imgmedia.lbb.in/media/2020/03/5e67d2e7101f7001397bb872_1583862503222.jpg",
@@ -158,7 +158,7 @@ const db = [
       "The nearest airports are Chhatrapati Shivaji Airport in Mumbai, and Airport in Pune.",
     distance: [84, 68],
     images: [
-      "https://hblimg.mmtcdn.com/content/hubble/img/lonavala/mmt/activities/m_imagica_lonavala_l_358_477.jpg",
+      "https://www.imagicaaworld.com/wp-content/uploads/passport-card.jpg?1699083581",
       "https://hblimg.mmtcdn.com/content/hubble/img/lonavala/mmt/activities/m_imagica_lonavala_l_358_477.jpg",
       "https://static.wixstatic.com/media/825e3d_15d7320512624c87904125560ebe8dff~mv2.jpg/v1/fill/w_560,h_322,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Imagica.jpg",
       "https://imgmedia.lbb.in/media/2020/03/5e67d2e7101f7001397bb872_1583862503222.jpg",
