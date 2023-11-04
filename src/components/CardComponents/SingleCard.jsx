@@ -79,30 +79,36 @@ const SingleCard = ({ data }) => {
 
 export default SingleCard;
 
+
+// grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+
 const Main = styled.div`
   width: 90%;
   margin: auto auto 30px auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
-  background: #FFF3E0;
+  background: #E8EAF6;
   padding: 0px 20px;
 `;
 
 const ProductContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 
   @media (max-width: 1025px) {
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const ImageContainer = styled.div`
   width: 100%;
-
-  @media (max-width: 1025px)
+  height: 400px;
 
   @media (max-width: 450px) {
     width: 420px;
@@ -123,6 +129,7 @@ const InfoContainer = styled.div`
   padding: 0px 20px;
 `;
 
+
 const Name = styled.p`
   text-align: center;
   padding: 10px 0px;
@@ -130,14 +137,20 @@ const Name = styled.p`
   font-weight: 700;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
-  background: #ffe0b2;
-  color: #e65100;
+  background: #D50000;
+  color: white;
   cursor: pointer;
+
+  &: hover {
+  background: #F44336;
+  transition: 0.3s;
+  }
 `;
+
 
 const Headings = styled.span`
   font-weight: 600;
-  color: #ef6c00;
+  color: #D50000;
 `;
 
 const Direction = styled.a`

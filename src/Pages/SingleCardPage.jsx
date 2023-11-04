@@ -122,10 +122,15 @@ const SingleCardPage = () => {
 
 export default SingleCardPage;
 
+
 const Title = styled.h1`
-  padding: 10px 0px;
-  background: #e65100;
+  padding: 30px 0px;
+  background: #1A237E;
   color: white;
+  margin: 0px 0px 20px 0px;
+
+  position: sticky;
+  top: 0;
 `;
 
 const Image = styled.img`
@@ -148,7 +153,7 @@ const InfoContainer = styled.div`
 
 const Headings = styled.span`
   font-weight: 600;
-  color: #ef6c00;
+  color: #C62828;
 `;
 
 const Direction = styled.a`
@@ -184,8 +189,8 @@ const ImageContainer = styled.div`
 const ImageBox = styled.div`
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  padding: 5px;
   border-radius: 5px;
+  cursor: pointer;
 `;
 
 const Images = styled.img`
