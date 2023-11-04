@@ -1,14 +1,16 @@
-# Getting Started with Create React App
+# Categories Reusable Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). -->
 
-## Available Scripts
+<!-- ## Available Scripts -->
 
-In the project directory, you can run:
+<!-- In the project directory, you can run: -->
 
-### `npm start`
+<!-- ### `npm start` -->
 
-Runs the app in the development mode.\
+<img src="./images/all_information.png />
+
+To see the live of the 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
