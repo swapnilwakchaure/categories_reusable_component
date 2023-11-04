@@ -8,7 +8,7 @@
 
 <!-- ### `npm start` -->
 
-<img src="./images/all_information.png />
+<img src="./images/all_information.png" />
 
 To see the live of the 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
